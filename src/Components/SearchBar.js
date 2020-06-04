@@ -24,7 +24,7 @@ setSearchinput = (e) => {
     this.setState({searchinput : e.target.value});
 };
 componentDidMount(){
-    search = (e) =>  axios.get.apply ('http://api.giphy.com/v1/gifs/search?q='+ this.state.searchinput).then((repsonse) => {
+    search = (e) =>  axios.get.apply ("http://api.giphy.com/v1/gifs/search?q=" + (this.state.searchinput)+"&api_key=Y57vdnPo1r3npopJkOoTM5rMYpsI2pad").then((repsonse) => {
             this.setState ( {gifs: response.data ["data"], state :"searching"});
             this.state.gifs.forEach((element) => {
                 console.log(element.ratings);
